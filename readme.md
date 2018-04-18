@@ -28,20 +28,19 @@
 ```json
 
 {
-  "events": [
-  {
+  "events": {
     "event_id1": {
       "title": "2018年5月LT 開催のお知らせ",
       "content": "本文",
       "event_date": "20180518",
-      "presenters": [
+      "presenters": {
         "user_id1": true
-      ],
+      },
       "organizer": "user_id1"
     }
-  ],
+  }
   "users": {
-    // userのjson object
+    // userのjson object達
   }
 }
 
