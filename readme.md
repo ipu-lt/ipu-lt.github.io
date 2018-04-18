@@ -38,9 +38,12 @@
       },
       "organizer": "user_id1"
     }
-  }
+  },
   "users": {
-    // userのjson object達
+    "user_id": {
+      "name": "TaikiFnit",
+      "uuid": "12345"
+    }
   }
 }
 
