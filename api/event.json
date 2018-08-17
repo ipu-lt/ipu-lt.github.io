@@ -1,0 +1,23 @@
+{
+  "event": {
+    "id": 1,
+    "title": "第3回 KendaiLT",
+    "event_datetime": "20180711 13:00:00",
+    "presenters": [
+      {
+        "id": 1,
+        "name": "TaikiFnit",
+        "email": "taikifnitspg@gmail.com",
+        "avatar": "https://"
+      }
+    ],
+    "listeners": [
+      {
+        "id": 1,
+        "name": "TaikiFnit",
+        "email": "taikifnitspg@gmail.com",
+        "avatar": "https://"
+      }
+    ]
+  }
+}

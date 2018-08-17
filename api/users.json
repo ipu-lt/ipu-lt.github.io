@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "TaikiFnit",
+      "profile": "iOS & Web Developer.",
+      "url": "https://github.com/TaikiFnit",
+      "presented_events": [
+        {
+          "id": 1,
+          "title": "第3回 KendaiLT",
+          "event_datetime": "20180711 13:00:00"
+        }
+      ]
+    }
+  ]
+}
