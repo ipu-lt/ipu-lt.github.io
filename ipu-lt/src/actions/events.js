@@ -18,7 +18,7 @@ export function fetchEvents() {
     dispatch(requestEvents());
 
     return fetch(
-      'https://raw.githubusercontent.com/ipu-lt/ipu-lt.github.io/react/db.json'
+      'https://raw.githubusercontent.com/ipu-lt/ipu-lt.github.io/react/api_docs/events.json'
     )
       .then(response => response.json())
       .then(json => dispatch(receiveEvents(json)));
