@@ -1,18 +1,20 @@
-// import { createBrowserHistory } from 'history';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { Provider } from 'react-redux';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { logger } from 'redux-logger';
-import * as reducers from './reducers';
-import App from './App';
+import { Provider } from 'react-redux';
+import { createBrowserHistory } from 'history';
+import { ConnectedRouter } from 'react-router-redux';
+import createStore from './store';
 import registerServiceWorker from './registerServiceWorker';
+import Route from './Route';
 
-const store = createStore(combineReducers(reducers), applyMiddleware(logger));
+const history = createBrowserHistory();
+const store = createStore(history);
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <ConnectedRouter history={history}>
+      <Route />
+    </ConnectedRouter>
   </Provider>,
   document.getElementById('root') as HTMLElement
 );

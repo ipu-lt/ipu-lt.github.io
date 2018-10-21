@@ -1,14 +1,15 @@
-export const fnit = '';
-// import {
-// //   applyMiddleware,
-// //   combineReducers,
-// // } from 'redux';
-// // import { routerReducer, routerMiddleware } from 'react-router-redux';
-// // import eventsReducer from '../reducers/events';
-// //
-// // export default function (history) {
-// //   return (
-// //     combineReducers({ events: eventsReducer, router: routerReducer }),
-// //     applyMiddleware(routerMiddleware(history))
-// //   );
-// // }
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { logger } from 'redux-logger';
+import { routerReducer, routerMiddleware } from 'react-router-redux';
+import { History } from 'history';
+import * as reducers from '../reducers';
+
+export default function(history: History) {
+  return createStore(
+    combineReducers({
+      ...reducers,
+      router: routerReducer,
+    }),
+    applyMiddleware(logger, routerMiddleware(history))
+  );
+}
